@@ -6,61 +6,131 @@
 }
 body{
     width: 100%;
+    overflow: hidden;
     height: 100vh;
+    background-image: url('/images/homeBg.png');
+    background-color: #7a2bae;
+    background-size: cover;
 }
 .mainContainer{
-    background-color: #7a2bae;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 2.5fr;
+}
+.upper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 100%;
+}
+.upper img {
+    margin-top: 2%;
+    position: absolute;
+    width: 40%;
+    height: 80%;
+}
+.lower{
     width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-nav{
-    background-color: #350c62;
-    box-shadow: 0px 2px 2px black;
-    height: 80px;
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10% 0px 0px;
+}
+.left img{
+    margin-top: 4%;
+    position: absolute;
+    width: 45%;
+    height: 90%;
+    animation: leftImg 2s linear infinite;
+}
+@keyframes leftImg {
+    0%, 100%{
+        margin-top: 4%;
+        transform: rotate(0deg);
+    }
+    50%{
+        margin-top: 1%;
+        transform: rotate(3deg);
+    }
+}
+.middle{
     width: 100%;
-    margin: 0%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.6fr 2fr;
 }
-label.logo{
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    font-size: 3.3rem;
-    padding: 0px 40px;
-    line-height: 85px;
+.play, .paper, .middle, .right{
+    width: 100%;
+    height: 100%;
 }
-nav ul{
-    float: right;
-    margin-right: 20px;
-    width: 70%;
-    text-align: right;
+.play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0px 20px;
-    font-family: 'Lilita One';
-    font-size: 2rem;
-    color: white;
-    border-radius: 15px;
-    transition: 0.1s;
-}
-li:hover{
-    color: #ffa800;
-}
-/*Label for the menu icon*/
-.checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
+.play img{
+    margin-top: -8%;
+    position: absolute;
+    width: 12%;
+    height: 10%;
+    border: 5px solid black;
+    border-radius: 60px;
+    filter: drop-shadow(2px 2px 2px black);
     cursor: pointer;
-    display: none;
+    transition: 0.3s;
 }
-/*Input field (checkbox)*/
-#check{
-    display: none;
+.play img:hover{
+    transform: scale(1.04);
 }
-
+.paper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.paper img{
+    margin-top: 4%;
+    margin-left: 2%;
+    position: absolute;
+    width: 35%;
+    height: 70%; 
+    animation: middleImg 2.3s linear infinite;   
+}
+@keyframes middleImg {
+    0%, 100%{
+        margin-top: 4%;
+    }
+    50%{
+        margin-top: 1%;
+    }
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right img{
+    margin-top: 4%;
+    margin-left: 5%;
+    position: absolute;
+    width: 43%;
+    height: 85%;
+    animation: rightImg 1.7s linear infinite;  
+}
+@keyframes rightImg {
+    0%, 100%{
+        margin-top: 4%;
+        transform: rotate(0deg);
+    }
+    50%{
+        margin-top: 1%;
+        transform: rotate(-3deg);
+    }
+}
 /* Extra small: phones < 480px */
 @media (max-width: 479px) {
 
@@ -68,36 +138,7 @@ li:hover{
 
 /* Small: phones 480px–767px */
 @media (min-width: 0px) and (max-width: 767px) {
-    .checkbtn{
-        display: block;
-    }
-    label.logo{
-        font-size: 3rem;
-        padding: 0px 30px;
-    }
-    nav ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        margin-top: -0.4%;
-        background-color: #56008f;
-        left: 100%;
-        text-align: center;
-        padding: 5% 2%;
-        transition: all 0.5s linear;
-    }
-    nav ul li{
-        width: 100%;
-        margin: 0%;
-    }
-    li:hover{
-        color: white;
-        background-color: #8842e3;
-        border-radius: 15px;
-    }
-    #check:checked ~ ul{
-        left: 0%;
-    }
+
 }
 
 /* Medium: tablets 768px–991px */
@@ -120,6 +161,6 @@ li:hover{
 /* Extra Large: desktops ≥ 1200px */
 @media (min-width: 1200px) {
     .mainContainer {
-        background-color: #7a2bae;
+        /* background-color: #7a2bae; */
     }
 }
