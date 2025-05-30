@@ -10,7 +10,9 @@ body{
     height: 100vh;
     background-image: url('/images/homeBg.png');
     background-color: #7a2bae;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
+    max-width: 100%;
 }
 .mainContainer{
     display: grid;
@@ -28,6 +30,7 @@ body{
     position: absolute;
     width: 40%;
     height: 80%;
+    overflow: hidden;
 }
 .lower{
     width: 100%;
@@ -110,6 +113,8 @@ body{
     }
 }
 .right{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,6 +125,7 @@ body{
     position: absolute;
     width: 43%;
     height: 85%;
+    overflow: hidden;
     animation: rightImg 1.7s linear infinite;  
 }
 @keyframes rightImg {
@@ -134,16 +140,139 @@ body{
 }
 /* Extra small: phones < 480px */
 @media (max-width: 479px) {
-
+    body{
+        background-color: yellow;
+    }
+}
+@media (min-width: 480px) and (max-width: 719px) {
+    .upper img {
+        margin-top: 10%;
+        width: 460px;
+        height: 460px;
+    }
+    .left{
+        padding: 0% 30% 0px 0px;
+    }
+    .left img{
+        margin-top: 47%;
+        margin-left: 15%;
+        width: 300px;
+        height: 300px;
+        transform: rotate(315deg);
+        animation: leftImg 2s linear infinite;
+    }
+    @keyframes leftImg {
+        0%, 100%{
+            margin-top: 47%;
+        }
+        50%{
+            margin-top: 43%;
+        }
+    }
+    .play img{
+        margin-top: -5%;
+        width: 200px;
+        height: 80px;
+    }
+    .paper img{
+        margin-top: 25%;
+        margin-left: 4%;
+        width: 300px;
+        height: 350px;
+    }
+    @keyframes middleImg {
+        0%, 100%{
+            margin-top: 25%;
+        }
+        50%{
+            margin-top: 19%;
+        }
+    }
+    .right img{
+        margin-top: 39%;
+        margin-left: 5%;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        transform: rotate(48deg);
+        animation: rightImg 1.3s linear infinite; 
+    }
+    @keyframes rightImg {
+        0%, 100%{
+            margin-top: 39%;
+        }
+        50%{
+            margin-top: 34%;
+        }
+    }
 }
 
 /* Small: phones 480px–767px */
-@media (min-width: 0px) and (max-width: 767px) {
-
+@media (min-width: 720px) and (max-width: 797px) {
+    .upper img {
+        margin-top: 10%;
+        width: 600px;
+        height: 600px;
+    }
+    .left{
+        padding: 0% 30% 0px 0px;
+    }
+    .left img{
+        margin-top: 39%;
+        margin-left: 15%;
+        width: 450px;
+        height: 450px;
+        transform: rotate(315deg);
+        animation: leftImg 2s linear infinite;
+    }
+    @keyframes leftImg {
+        0%, 100%{
+            margin-top: 39%;
+        }
+        50%{
+            margin-top: 34%;
+        }
+    }
+    .play img{
+        margin-top: -5%;
+        width: 200px;
+        height: 80px;
+    }
+    .paper img{
+        margin-top: 25%;
+        margin-left: 2%;
+        width: 400px;
+        height: 550px;
+    }
+    @keyframes middleImg {
+        0%, 100%{
+            margin-top: 25%;
+        }
+        50%{
+            margin-top: 19%;
+        }
+    }
+    .right img{
+        margin-top: 33%;
+        margin-left: 2%;
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        transform: rotate(48deg);
+        animation: rightImg 1.3s linear infinite; 
+    }
+    @keyframes rightImg {
+        0%, 100%{
+            margin-top: 33%;
+        }
+        50%{
+            margin-top: 28%;
+        }
+    }
 }
 
 /* Medium: tablets 768px–991px */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 798px) and (max-width: 991px) {
     .upper img {
         margin-top: 10%;
         width: 600px;
