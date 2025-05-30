@@ -10,7 +10,7 @@ body{
     height: 100vh;
     background-image: url('/images/homeBg.png');
     background-color: #7a2bae;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .mainContainer{
     display: grid;
@@ -47,6 +47,7 @@ body{
     width: 45%;
     height: 90%;
     animation: leftImg 2s linear infinite;
+
 }
 @keyframes leftImg {
     0%, 100%{
@@ -105,7 +106,7 @@ body{
         margin-top: 4%;
     }
     50%{
-        margin-top: 1%;
+        margin-top: 2%;
     }
 }
 .right{
@@ -143,8 +144,65 @@ body{
 
 /* Medium: tablets 768px–991px */
 @media (min-width: 768px) and (max-width: 991px) {
-    .mainContainer {
-        background-color: purple;
+    .upper img {
+        margin-top: 10%;
+        width: 600px;
+        height: 600px;
+    }
+    .left{
+        padding: 0% 30% 0px 0px;
+    }
+    .left img{
+        margin-top: 32%;
+        margin-left: 15%;
+        width: 500px;
+        height: 500px;
+        transform: rotate(315deg);
+        animation: leftImg 2s linear infinite;
+    }
+    @keyframes leftImg {
+        0%, 100%{
+            margin-top: 32%;
+        }
+        50%{
+            margin-top: 27%;
+        }
+    }
+    .play img{
+        margin-top: -5%;
+        width: 200px;
+        height: 80px;
+    }
+    .paper img{
+        margin-top: 20%;
+        margin-left: 2%;
+        width: 450px;
+        height: 500px;
+    }
+    @keyframes middleImg {
+        0%, 100%{
+            margin-top: 20%;
+        }
+        50%{
+            margin-top: 10%;
+        }
+    }
+    .right img{
+        margin-top: 23%;
+        margin-left: 2%;
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        transform: rotate(48deg);
+        animation: rightImg 1.3s linear infinite; 
+    }
+    @keyframes rightImg {
+        0%, 100%{
+            margin-top: 23%;
+        }
+        50%{
+            margin-top: 21%;
+        }
     }
     label.logo{
         padding: 0px 30px;
@@ -153,8 +211,56 @@ body{
 
 /* Large: laptops 992px–1199px */
 @media (min-width: 992px) and (max-width: 1199px) {
-    .mainContainer {
-        background-color: brown;
+    .upper img {
+        margin-top: 2%;
+        width: 50%;
+        height: 78%;
+    }
+    .left{
+        padding: 0% 10% 0px 0px;
+    }
+    .left img{
+        margin-top: 3%;
+        margin-right: 10%;
+        width: 50%;
+        height: 85%;
+    }
+    @keyframes leftImg {
+        0%, 100%{
+            margin-top: 3%;
+            transform: rotate(0deg);
+        }
+        50%{
+            margin-top: 0%;
+            transform: rotate(3deg);
+        }
+    }
+    .play img{
+        margin-top: -12%;
+        width: 15%;
+        height: 10%;
+    }
+    .paper img{
+        margin-top: 4%;
+        margin-left: 2%;
+        width: 40%;
+        height: 65%; 
+    }
+    @keyframes middleImg {
+        0%, 100%{
+            margin-top: 4%;
+        }
+        50%{
+            margin-top: 1%;
+        }
+    }
+    .right img{
+        margin-top: 7%;
+        margin-left: 18%;
+        position: absolute;
+        width: 48%;
+        height: 85%;
+        animation: rightImg 1.7s linear infinite;  
     }
 }
 
