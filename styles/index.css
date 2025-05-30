@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Berkshire+Swash&family=Black+Han+Sans&family=Cal+Sans&family=Carter+One&family=Comic+Relief:wght@400;700&family=Happy+Monkey&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jua&family=Lilita+One&family=Luckiest+Guy&family=Madimi+One&family=New+Amsterdam&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=Outfit:wght@100..900&family=Pacifico&family=Pangolin&family=Passion+One:wght@400;700;900&family=Playwrite+DE+Grund:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sniglet:wght@400;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&family=Underdog&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; 
     height: 100vh;
     background-image: url('/images/homeBg.png');
     background-color: #7a2bae;
@@ -14,22 +16,29 @@ body{
     background-size: 100% 100%;
     max-width: 100%;
 }
+
 .mainContainer{
+
+    width: 100%;
+    height: 100vh;
     display: grid;
     grid-template-rows: 0.1fr 1fr 2.5fr;
 }
+
 .upper{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative; 
 }
+
 .upper img {
-    margin-top: 2%;
+    margin-top: 3%;
     position: absolute;
-    width: 40%;
-    height: 80%;
+    width: 50%;
+    height: 360%;
     overflow: hidden;
 }
 .lower{
@@ -38,98 +47,110 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
 .left{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0% 10% 0px 0px;
+    position: relative; 
 }
+
 .left img{
-    margin-top: 4%;
+    top: -7%;
     position: absolute;
-    width: 45%;
-    height: 90%;
+    width: 130%;
+    height: 140%;
     transform: rotate(30deg);
     animation: leftImg 2s linear infinite;
-
 }
+
 @keyframes leftImg {
     0%, 100%{
-        margin-top: 4%;
         transform: rotate(30deg);
     }
     50%{
-        margin-top: 1%;
         transform: rotate(33deg);
     }
 }
+
 .middle{
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-rows: 0.6fr 2fr;
 }
+
 .play, .paper, .middle, .right{
     width: 100%;
     height: 100%;
 }
+
 .play{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
 }
+
 .play img{
-    margin-top: -8%;
+    margin-top: -5%; 
     position: absolute;
-    width: 12%;
-    height: 10%;
+    width: 15%;
+    height: 13%;
     border: 5px solid black;
     border-radius: 60px;
     filter: drop-shadow(2px 2px 2px black);
     cursor: pointer;
     transition: 0.3s;
 }
+
 .play img:hover{
     transform: scale(1.04);
 }
+
 .paper{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; 
 }
+
 .paper img{
-    margin-top: 4%;
     margin-left: 2%;
+    top: -2%;
     position: absolute;
-    width: 35%;
-    height: 70%; 
-    animation: middleImg 2.3s linear infinite;   
+    width: 100%;
+    height: 120%;
+    animation: middleImg 1.8s linear infinite;
 }
+
 @keyframes middleImg {
     0%, 100%{
-        margin-top: 4%;
+        top: -2%;
     }
     50%{
-        margin-top: 2%;
+        top: 7%;
     }
 }
+
 .right{
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; 
 }
+
 .right img{
-    margin-top: 6%;
-    margin-left: 5%;
+    top: -13%;
+    left: -13%;
     position: absolute;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
+    width: 155%;
+    height: 150%;
     transform: rotate(330deg);
-    animation: rightImg 1.7s linear infinite;  
+    animation: rightImg 1.7s linear infinite;
 }
+
 @keyframes rightImg {
     0%, 100%{
         margin-top: 6%;
@@ -140,243 +161,176 @@ body{
         transform: rotate(327deg);
     }
 }
+
 /* Extra small: phones < 480px */
 @media (max-width: 479px) {
     body{
-        background-color: yellow;
+        background-color: yellow; 
     }
 }
+
+/* Small: phones 480px–719px */
 @media (min-width: 480px) and (max-width: 719px) {
-    .upper img {
-        margin-top: 10%;
+ .upper img {
+        margin-top: 9%;
         width: 460px;
-        height: 460px;
+        height: 550px;
     }
     .left{
-        padding: 0% 30% 0px 0px;
+        padding: 0% 10% 0px 0px; 
     }
     .left img{
-        margin-top: 47%;
-        margin-left: 15%;
-        width: 300px;
-        height: 300px;
+        top: 30%;
+        left: -60px;
+        width: 300px; 
+        height: 400px;
         transform: rotate(0deg);
-        animation: leftImg 2s linear infinite;
     }
-    @keyframes leftImg {
+
+    @keyframes leftImg { 
         0%, 100%{
-            margin-top: 47%;
+            top: 30%;
         }
         50%{
-            margin-top: 43%;
+            top: 33%;
         }
     }
     .play img{
-        margin-top: -5%;
+        margin-top: -10%;
         width: 200px;
-        height: 80px;
+        height: 10%;
     }
     .paper img{
-        margin-top: 25%;
-        margin-left: 4%;
-        width: 300px;
-        height: 350px;
+        margin-top: 10%;
+        margin-left: 0%;
+        width: 150%;
+        height: 100%;
     }
     @keyframes middleImg {
         0%, 100%{
-            margin-top: 25%;
+            margin-top: 10%;
         }
         50%{
-            margin-top: 19%;
+            margin-top: 13%;
         }
     }
     .right img{
-        margin-top: 39%;
-        margin-left: 5%;
-        position: absolute;
-        width: 300px;
-        height: 300px;
+        top: 23.5%;
+        margin-left: -30%;
+        width: 300px; 
+        height: 400px;
         transform: rotate(0deg);
-        animation: rightImg 1.3s linear infinite; 
     }
     @keyframes rightImg {
         0%, 100%{
-            margin-top: 39%;
+            top: 23.5%;
         }
         50%{
-            margin-top: 34%;
+            top: 21%;
         }
     }
 }
 
-/* Small: phones 480px–767px */
+/* Small: phones 720px–797px - Renamed from your original "Small: phones 480px–767px" to avoid overlap with previous block */
 @media (min-width: 720px) and (max-width: 797px) {
     .upper img {
-        margin-top: 10%;
-        width: 600px;
-        height: 600px;
-    }
-    .left{
-        padding: 0% 30% 0px 0px;
-    }
-    .left img{
-        margin-top: 39%;
-        margin-left: 15%;
-        width: 450px;
-        height: 450px;
-        transform: rotate(0deg);
-        animation: leftImg 2s linear infinite;
-    }
-    @keyframes leftImg {
-        0%, 100%{
-            margin-top: 39%;
-        }
-        50%{
-            margin-top: 34%;
-        }
-    }
-    .play img{
-        margin-top: -5%;
-        width: 200px;
-        height: 80px;
-    }
-    .paper img{
-        margin-top: 25%;
-        margin-left: 2%;
-        width: 450px;
-        height: 500px;
-    }
-    @keyframes middleImg {
-        0%, 100%{
-            margin-top: 25%;
-        }
-        50%{
-            margin-top: 19%;
-        }
-    }
-    .right img{
-        margin-top: 33%;
-        margin-left: 2%;
-        position: absolute;
-        width: 450px;
-        height: 450px;
-        transform: rotate(0deg);
-        animation: rightImg 1.3s linear infinite; 
-    }
-    @keyframes rightImg {
-        0%, 100%{
-            margin-top: 33%;
-        }
-        50%{
-            margin-top: 28%;
-        }
-    }
-}
-
-/* Medium: tablets 768px–991px */
-@media (min-width: 798px) and (max-width: 991px) {
-    .upper img {
-        margin-top: 10%;
-        width: 600px;
-        height: 600px;
-    }
-    .left{
-        padding: 0% 30% 0px 0px;
-    }
-    .left img{
-        margin-top: 10%;
-        margin-right: 4%;
+        margin-top: 3%;
         width: 550px;
         height: 550px;
-        transform: rotate(30deg);
-        animation: leftImg 2s linear infinite;
     }
-    @keyframes leftImg {
+    .left{
+        padding: 0% 10% 0px 0px; 
+    }
+    .left img{
+        top: 30%;
+        left: -32%;
+        margin-right: 12%; 
+        width: 400px; 
+        height: 500px;
+        transform: rotate(0deg);
+    }
+
+    @keyframes leftImg { 
         0%, 100%{
-            margin-top: 10%;
-            transform: rotate(30deg);
+            top: 30%;
         }
         50%{
-            margin-top: 6%;
-            transform: rotate(33deg);
+            top: 33%;
         }
     }
     .play img{
-        margin-top: -5%;
+        margin-top: -10%;
         width: 200px;
-        height: 80px;
+        height: 10%;
     }
     .paper img{
-        margin-top: 20%;
-        margin-left: 2%;
-        width: 450px;
-        height: 500px;
+        margin-top: 10%;
+        margin-left: 0%;
+        width: 150%;
+        height: 100%;
     }
     @keyframes middleImg {
         0%, 100%{
-            margin-top: 20%;
+            margin-top: 10%;
         }
         50%{
-            margin-top: 10%;
+            margin-top: 13%;
         }
     }
     .right img{
-        margin-top: 10%;
-        margin-left: 19%;
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        animation: rightImg 1.3s linear infinite; 
+        top: 23.5%;
+        margin-left: -30%;
+        width: 500px;
+        height: 550px;
+        transform: rotate(0deg);
     }
     @keyframes rightImg {
         0%, 100%{
-            margin-top: 10%;
-            transform: rotate(328deg);
+            top: 23.5%;
         }
         50%{
-            margin-top: 6%;
-            transform: rotate(325deg);
+            top: 21%;
         }
-    }
-    label.logo{
-        padding: 0px 30px;
     }
 }
 
-/* Large: laptops 992px–1199px */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* Medium: tablets 798px–991px */
+@media (min-width: 798px) and (max-width: 991px) {
     .upper img {
-        margin-top: 2%;
-        width: 50%;
-        height: 78%;
+        margin-top: 3%;
+        width: 600px;
+        height: 620px;
     }
     .left{
-        padding: 0% 10% 0px 0px;
+        padding: 0% 10% 0px 0px; 
     }
     .left img{
-        margin-top: 3%;
-        margin-right: 10%;
-        width: 50%;
-        height: 85%;
+        top: 5%;
+        left: -32%;
+        margin-right: 12%; 
+        width: 480px; 
+        height: 500px;
+        transform: rotate(0deg);
     }
-    @keyframes leftImg {
+
+    @keyframes leftImg { 
         0%, 100%{
-            margin-top: 3%;
+            top: 5%;
         }
         50%{
-            margin-top: 0%;
+            top: -1%;
         }
     }
     .play img{
-        margin-top: -12%;
+        margin-top: -8%; 
         width: 15%;
         height: 10%;
     }
     .paper img{
         margin-top: 4%;
-        margin-left: 2%;
-        width: 40%;
-        height: 65%; 
+        margin-left: 0%;
+        width: 130%;
+        height: 130%;
     }
     @keyframes middleImg {
         0%, 100%{
@@ -387,18 +341,86 @@ body{
         }
     }
     .right img{
-        margin-top: 7%;
-        margin-left: 18%;
-        position: absolute;
-        width: 48%;
-        height: 85%;
-        animation: rightImg 1.7s linear infinite;  
+        top: 0%;
+        margin-left: -30%;
+        width: 600px;
+        height: 590px;
+        transform: rotate(0deg);
+    }
+    @keyframes rightImg {
+        0%, 100%{
+            top: 0%;
+        }
+        50%{
+            margin-top: 3%;
+        }
+    }
+}
+
+/* Large: laptops 992px–1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .upper img {
+        margin-top: 3%;
+        width: 600px;
+        height: 660px;
+    }
+    .left{
+        padding: 0% 10% 0px 0px; 
+    }
+    .left img{
+        top: -9%;
+        margin-top: 3%;
+        margin-right: 10%; 
+        width: 150%; 
+        height: 140%;
+    }
+
+    @keyframes leftImg { 
+        0%, 100%{
+            margin-top: 3%;
+            transform: rotate(30deg); 
+        }
+        50%{
+            margin-top: 0%;
+            transform: rotate(33deg); 
+        }
+    }
+    .play img{
+        margin-top: -8%; 
+        width: 15%;
+        height: 10%;
+    }
+    .paper img{
+        margin-top: 4%;
+        margin-left: 2%;
+        width: 130%;
+        height: 130%;
+    }
+    @keyframes middleImg {
+        0%, 100%{
+            margin-top: 4%;
+        }
+        50%{
+            margin-top: 1%;
+        }
+    }
+    .right img{
+        top: -12%;
+        margin-left: -4%;
+        width: 150%;
+        height: 140%;
     }
 }
 
 /* Extra Large: desktops ≥ 1200px */
-@media (min-width: 1200px) {
-    .mainContainer {
-        /* background-color: #7a2bae; */
+@media (min-width: 1537px) {
+    .left img{
+        width: 730px;
+        height: 730px;       
+    }
+    .right img{
+        left: -21%;
+        width: 730px;
+        height: 730px;
     }
 }
