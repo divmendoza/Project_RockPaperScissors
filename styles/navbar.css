@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Berkshire+Swash&family=Black+Han+Sans&family=Cal+Sans&family=Carter+One&family=Comic+Relief:wght@400;700&family=Happy+Monkey&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jua&family=Lilita+One&family=Luckiest+Guy&family=Madimi+One&family=New+Amsterdam&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=Outfit:wght@100..900&family=Pacifico&family=Pangolin&family=Passion+One:wght@400;700;900&family=Playwrite+DE+Grund:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sniglet:wght@400;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&family=Underdog&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -38,12 +39,13 @@ nav ul{
     margin-right: 20px;
     width: 70%;
     text-align: right;
+    z-index: 100;
 }
 nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0px 20px;
-    font-family: 'Lilita One';
+    font-family: 'Spicy Rice';
     font-size: 2rem;
     color: white;
     border-radius: 15px;

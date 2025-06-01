@@ -65,6 +65,19 @@ body {
     height: 86%;
     bottom: 12%;
 }
+.container2 #message{
+    position: absolute;
+    text-align: center;
+    font-family: 'Staatliches';
+    color: rgb(108, 29, 169);
+    font-size: 1.5rem;
+    display: flex;
+    line-height: 1.7rem;
+    align-items: center;
+    width: 70%;
+    padding: 0% 5%;
+    height: 55%;
+}
 .container3 img {
     position: absolute;
     top: 35%;
@@ -82,14 +95,134 @@ body {
     }
 }
 @media (max-width: 479px) {
+    .mainContainer{
+        grid-template-columns: 0.1fr 7.5fr 0.1fr;
+    }
+    .container1 img {
+        right: -1367%; 
+        width: 1335%;
+        height: 10%;
+    }
+    @keyframes left {
+        0%, 100%{
+            top: 45%;
+        }50%{
+            top: 40%;
+        }
+    }
+    .container2{
+        padding: 0%;
+    }
+    .container2 #message{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    .container3 img {
+        top: 80%;
+        left: -1487%; 
+        width: 1325%;
+        height: 10%;
+    }
+    @keyframes right {
+        0%, 100%{
+            top: 45%;
+        }50%{
+            top: 40%;
+        }
+    }
 }
 @media (min-width: 480px) and (max-width: 719px) {
+    .mainContainer{
+        grid-template-columns: 0.5fr 4.5fr 0.5fr;
+    }
+    .container1 img {
+        right: -167%; 
+        width: 235%;
+        height: 30%;
+    }
+    .container2 #message{
+        font-size: 1.05rem;
+        line-height: 1.5rem;
+    }
+    .container3 img {
+        top: 40%;
+        left: -187%; 
+        width: 225%;
+        height: 25%;
+    }
 }
 /* Small: phones 720px–797px - Renamed from your original "Small: phones 480px–767px" to avoid overlap with previous block */
-@media (min-width: 720px) and (max-width: 797px) {
+@media (min-width: 720px) and (max-width: 798px) {
+    .mainContainer{
+        grid-template-columns: 0.5fr 4.5fr 0.5fr;
+    }
+    .container1 img {
+        right: -167%; 
+        width: 235%;
+        height: 30%;
+    }
+    @keyframes left {
+        0%, 100%{
+            top: 35%;
+        }50%{
+            top: 30%;
+        }
+    }
+    .container2 #message{
+        font-size: 1.27rem;
+        line-height: 1.7rem;
+    }
+    .container3 img {
+        top: 40%;
+        left: -187%; 
+        width: 225%;
+        height: 25%;
+    }
+    @keyframes right {
+        0%, 100%{
+            top: 40%;
+        }50%{
+            top: 35%;
+        }
+    }
 }
 /* Medium: tablets 798px–991px */
-@media (min-width: 798px) and (max-width: 991px) {
+@media (min-width: 799px) and (max-width: 992px) {
+    .mainContainer {
+        grid-template-columns: 1fr 3.5fr 1fr;
+    }
+    .container1 img {
+        right: -67%; 
+        width: 125%;
+        height: 40%;
+    }
+    .container2 #message{
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
+    .container3 img {
+        left: -77%; 
+        width: 125%;
+        height: 35%;
+    }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 993px) and (max-width: 1199px) {
+    .mainContainer {
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    .container1 img {
+        right: -55%; 
+        width: 100%;
+        height: 40%;
+    }
+    .container2 #message{
+        font-size: 1.47rem;
+        line-height: 1.7rem;
+    }
+    .container3 img {
+        left: -61%; 
+        width: 95%;
+        height: 35%;
+    }
+
 }
