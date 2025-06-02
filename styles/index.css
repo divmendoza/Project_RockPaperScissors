@@ -67,10 +67,12 @@ body{
 
 @keyframes leftImg {
     0%, 100%{
+        top: -7%;
         transform: rotate(30deg);
     }
     50%{
-        transform: rotate(33deg);
+        top: -4%;
+        transform: rotate(27deg);
     }
 }
 
