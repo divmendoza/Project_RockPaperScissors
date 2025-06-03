@@ -180,51 +180,51 @@ body{
         margin-top: 80px;
         left: -50px;
         width: 230px; 
-        height: 350px;
+        height: 250px;
         transform: rotate(0deg);
     }
 
     @keyframes leftImg { 
         0%, 100%{
-            top: 30%;
+            top: 45%;
         }
         50%{
-            top: 33%;
+            top: 48%;
         }
     }
     .play img{
         margin-top: 0%;
         width: 150px;
-        height: 8%;
+        height: 75px;
     }
     .paper img{
         top: 20%;
         margin-top: 90%;
         margin-left: 0%;
         width: 160%;
-        height: 90%;
+        height: 250px;
     }
     @keyframes middleImg {
         0%, 100%{
-            margin-top: 10%;
+            margin-top: 90%;
         }
         50%{
-            margin-top: 13%;
+            margin-top: 98%;
         }
     }
     .right img{
         margin-left: -30%;
         margin-top: 100px;
         width: 260px; 
-        height: 350px;
+        height: 250px;
         transform: rotate(0deg);
     }
     @keyframes rightImg {
         0%, 100%{
-            top: 23.5%;
+            top: 43.5%;
         }
         50%{
-            top: 21%;
+            top: 41%;
         }
     }
 }
