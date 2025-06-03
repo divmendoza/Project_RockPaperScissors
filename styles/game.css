@@ -168,7 +168,7 @@ body{
     }
     .player img{
         width: 1200px;
-        height: 300px;
+        height: 260px;
     }
     .round{
         font-size: 5rem;
@@ -176,7 +176,7 @@ body{
 
     .opponent img{
         width: 800px;
-        height: 330px;
+        height: 270px;
     }
     .lower{
         margin-bottom: 230px;
