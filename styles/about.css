@@ -95,6 +95,10 @@ body {
     }
 }
 @media (max-width: 479px) {
+    body{
+        background-image: url('/images/mobileBG.png');
+        background-size: 100% 100%;
+    }
     .mainContainer{
         grid-template-columns: 0.1fr 7.5fr 0.1fr;
     }
@@ -121,7 +125,7 @@ body {
         top: 47%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 58%;
+        height: 65%;
         width: 100%;
     }
     .container2 #message{
