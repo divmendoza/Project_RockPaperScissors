@@ -113,13 +113,20 @@ body {
     .container2{
         padding: 0%;
     }
+    .container2 img{
+        align-self: center;
+        top: 15%;
+        height: 60%;
+        width: 100%;
+    }
     .container2 #message{
-        font-size: 1rem;
-        line-height: 1.5rem;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        top: 21%;
     }
     .container3 img {
         top: 80%;
-        left: -1487%; 
+        left: -1357%; 
         width: 1325%;
         height: 10%;
     }
