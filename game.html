@@ -26,26 +26,27 @@
     <div class="mainContainer">
         <div class="upper">
             <div class="upperLeft">
-                <img src="/images/you0.png">
+                <img id = "scoreBoard1" src="/images/you0.png">
             </div>
             <div class="upperRight">
-                <img src = "/images/opp0.png">
+                <img id = "scoreBoard2" src = "/images/opp0.png">
             </div>
         </div>
         <div class="middle">
             <div class="player">
                 <img src="/images/youRock.png">
             </div>
-            <div class="round">0</div>
+            <div class="round" id="round">1</div>
             <div class="opponent">
                 <img src="/images/oppSci.png">
             </div>
         </div>
         <div class="lower">
-            <img src="/images/choiceRock.png" id = "rockButton">
-            <img src="/images/choicePaper.png" id = "paperButton">
-            <img src="/images/choiceScissors.png" id = "scissorsButton">
+            <img src="/images/choiceRock.png" id = "rockButton" onclick = 'process(0)'>
+            <img src="/images/choicePaper.png" id = "paperButton" onclick = 'process(1)'>
+            <img src="/images/choiceScissors.png" id = "scissorsButton" onclick = 'process(2)'>
         </div>
     </div>
+    <script src = "/scripts/game.js"></script>
 </body>
 </html>
