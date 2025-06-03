@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Berkshire+Swash&family=Black+Han+Sans&family=Cal+Sans&family=Carter+One&family=Comic+Relief:wght@400;700&family=Happy+Monkey&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jua&family=Lilita+One&family=Luckiest+Guy&family=Madimi+One&family=New+Amsterdam&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=Outfit:wght@100..900&family=Pacifico&family=Pangolin&family=Passion+One:wght@400;700;900&family=Playwrite+DE+Grund:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sniglet:wght@400;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&family=Underdog&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/homeBg.png');
+    background-color: #7a2bae;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    max-width: 100%;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 2.5fr 0.3fr 3.1fr;
+}
+.upper{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+.upper img{
+    width: 70%;
+    height: 100%;
+    filter: drop-shadow(2px 2px 3px black);
+}
+.description{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 0px 20px;
+    margin-top: 50px;
+    width: 68%;
+    height: 60%;
+    text-align: center;
+    color: #783bb8;
+    font-size: 1.4rem;
+    font-family: 'Luckiest Guy';
+    text-shadow: 1px 1px 0.1px #dfd2dd;
+    line-height: 1.3;
+}
+.middle{
+    width: 100%;
+    height: 100%; 
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+}
+.sam, .hart, .deyb, .dani{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: 'Spicy Rice';
+    align-items: center;
+    color: #ffe05c;
+    text-shadow: 3px 3px 2px black;
+}
+.sam{
+    font-size: 1.5rem;
+    justify-content: end;
+    padding-right: 40px;
+}
+.hart{
+    font-size: 1.5rem;
+    justify-content: center;
+    padding-left: 10px;
+}
+.deyb{
+    font-size: 1.5rem;
+    justify-content: start;
+    padding-left: 50px;
+}
+.dani{
+    font-size: 1.5rem;
+    justify-content: start;
+    padding-left: 10px;
+}
+.lower{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 0% 0% 0%;
+    filter: drop-shadow(2px 2px 2px black);
+}
+.samContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 6%;
+}
+.samContainer img{
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    left: -15%;
+    top: 5%;
+    transform: rotate(-10deg);
+}
+.hartContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.hartContainer img{
+    position: absolute;
+    width: 130%;
+    height: 120%;
+}
+.deybContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: -2%;
+}
+.deybContainer img{
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    top: -7%;
+    left: -20%;
+}
+.daniContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 8%;
+}
+.daniContainer img{
+    width: 105%;
+    height: 105%;
+    position: absolute;
+    top: -3%;
+    left: -7%;
+}
+.samContainer img:hover{
+    animation: up1 0.7s linear;
+}
+@keyframes up1 {
+    0%, 100% {
+        top: 5%;
+    }
+    50% {
+        top: 2%;
+    }
+}
+.hartContainer img:hover{
+     animation: up2 0.7s linear;
+}
+@keyframes up2 {
+    0%, 100% {
+        top: 0%;
+    }
+    50% {
+        top: -3%;
+    }
+}
+.deybContainer img:hover{
+    animation: up3 0.7s linear;
+}
+@keyframes up3 {
+    0%, 100% {
+        top: -7%;
+    }
+    50% {
+        top: -10%;
+    }
+}
+.daniContainer img:hover{
+    animation: up4 0.7s linear;
+}
+@keyframes up4 {
+    0%, 100% {
+        top: -1%;
+    }
+    50% {
+        top: -3%;
+    }
+}
+@media (max-width: 479px) {
+    .mainContainer {
+        grid-template-rows: 2.5fr 0.3fr 3.1fr;
+    }
+    .upper{
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    .upper img{
+        width: 90%;
+        height: 50%;
+    }
+    .description{
+        padding: 0px 20px;
+        margin-top: 25px;
+        width: 88%;
+        height: 43%;
+        font-size: 0.7rem;
+        line-height: 1.2;
+    }
+    .middle{
+        grid-template-columns: 0.9fr 0.8fr 0.8fr 0.9fr;
+        padding-top: 4.2%;
+        height: 170%;
+        align-items: end;
+    }
+    .sam{
+        text-align: center;
+        font-size: 1.3rem;
+        padding-right: 0px;
+    }
+    .hart{
+        text-align: center;
+        font-size: 1.2rem;
+        padding-left: 0px;
+    }
+    .deyb{
+        text-align: center;
+        font-size: 1.1rem;
+        padding-left: 0px;
+    }
+    .dani{
+        text-align: center;
+        font-size: 1.2rem;
+        padding-left: 0px;
+    }
+    .lower{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1% 0% 0% 0%;
+    }
+    .samContainer{
+        left: -3%;
+        width: 110%;
+    }
+    .samContainer img{
+        width: 280%;
+        height: 90%;
+        left: -105%;
+        top: 20%;
+        transform: rotate(-10deg);
+    }
+    @keyframes up1 {
+        0%, 100% {
+            top: 20%;
+        }
+        50% {
+            top: 17%;
+        }
+    }
+    .hartContainer{
+        left: -2% 
+    }
+    .hartContainer img{
+        width: 270%;
+        height: 85%;
+        left: -79%;
+        top: 17%;
+    }
+    @keyframes up2 {
+        0%, 100% {
+            top: 17%;
+        }
+        50% {
+            top: 14%;
+        }
+    }
+    .deybContainer{
+        left: -1%;
+    }
+    .deybContainer img{
+        width: 270%;
+        height: 85%;
+        top: 12%;
+        left: -79%;
+    }
+    @keyframes up3 {
+        0%, 100% {
+            top: 12%;
+        }
+        50% {
+            top: 9%;
+        }
+    }
+    .daniContainer{
+        width: 100%;
+        height: 100%;
+        right: 0.6%;
+    }
+    .daniContainer img{
+        width: 205%;
+        height: 70%;
+        top: 16%;
+        left: -38%;
+    }
+    @keyframes up4 {
+        0%, 100% {
+            top: 16%;
+        }
+        50% {
+            top: 13%;
+        }
+    }
+
+}
+@media (min-width: 480px) and (max-width: 719px) {
+    .mainContainer {
+        grid-template-rows: 2.5fr 0.3fr 3.1fr;
+    }
+    .upper{
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    .upper img{
+        width: 90%;
+        height: 100%;
+    }
+    .description{
+        padding: 0px 20px;
+        margin-top: 50px;
+        width: 88%;
+        height: 60%;
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+    .middle{
+        grid-template-columns: 0.9fr 0.8fr 0.8fr 0.9fr;
+        padding-top: 4.2%;
+        height: 120%;
+        height: 100%;
+    }
+    .sam{
+        font-size: 0.9rem;
+        padding-right: 20px;
+    }
+    .hart{
+        font-size: 0.9rem;
+        padding-left: 10px;
+    }
+    .deyb{
+        font-size: 0.9rem;
+        padding-left: 10px;
+    }
+    .dani{
+        font-size: 0.9rem;
+        padding-left: 0px;
+    }
+    .lower{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1% 0% 0% 0%;
+    }
+    .samContainer{
+        left: 2%;
+    }
+    .samContainer img{
+        width: 180%;
+        height: 90%;
+        left: -45%;
+        top: 20%;
+        transform: rotate(-10deg);
+    }
+    @keyframes up1 {
+        0%, 100% {
+            top: 20%;
+        }
+        50% {
+            top: 17%;
+        }
+    }
+    .hartContainer{
+        /* left */
+    }
+    .hartContainer img{
+        width: 180%;
+        height: 85%;
+        left: -29%;
+        top: 17%;
+    }
+    @keyframes up2 {
+        0%, 100% {
+            top: 17%;
+        }
+        50% {
+            top: 14%;
+        }
+    }
+    .deybContainer{
+        left: -3%;
+    }
+    .deybContainer img{
+        width: 180%;
+        height: 85%;
+        top: 12%;
+        left: -29%;
+    }
+    @keyframes up3 {
+        0%, 100% {
+            top: 12%;
+        }
+        50% {
+            top: 9%;
+        }
+    }
+    .daniContainer{
+        width: 100%;
+        height: 100%;
+        right: 9.6%;
+    }
+    .daniContainer img{
+        width: 145%;
+        height: 70%;
+        top: 16%;
+        left: -8%;
+    }
+    @keyframes up4 {
+        0%, 100% {
+            top: 16%;
+        }
+        50% {
+            top: 13%;
+        }
+    }
+
+}
+/* Small: phones 720px–797px - Renamed from your original "Small: phones 480px–767px" to avoid overlap with previous block */
+@media (min-width: 720px) and (max-width: 798px) {
+    .mainContainer {
+        grid-template-rows: 2.5fr 0.3fr 3.1fr;
+    }
+    .upper{
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    .upper img{
+        width: 90%;
+        height: 100%;
+    }
+    .description{
+        padding: 0px 20px;
+        margin-top: 50px;
+        width: 88%;
+        height: 60%;
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+    .middle{
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+        padding-top: 8.2%;
+        height: 120%;
+    }
+    .sam{
+        font-size: 1.1rem;
+        padding-right: 20px;
+    }
+    .hart{
+        font-size: 1.1rem;
+        padding-left: 10px;
+    }
+    .deyb{
+        font-size: 1.1rem;
+        padding-left: 10px;
+    }
+    .dani{
+        font-size: 1.1rem;
+        padding-left: 0px;
+    }
+    .lower{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1% 0% 0% 0%;
+    }
+    .samContainer{
+        left: 6%;
+    }
+    .samContainer img{
+        width: 180%;
+        height: 120%;
+        left: -45%;
+        top: 10%;
+        transform: rotate(-10deg);
+    }
+    @keyframes up1 {
+        0%, 100% {
+            top: 10%;
+        }
+        50% {
+            top: 7%;
+        }
+    }
+    .hartContainer{
+        /* left */
+    }
+    .hartContainer img{
+        width: 180%;
+        height: 105%;
+        left: -30%;
+        top: 6%;
+    }
+    @keyframes up2 {
+        0%, 100% {
+            top: 6%;
+        }
+        50% {
+            top: 3%;
+        }
+    }
+    .deybContainer{
+        left: -5.5%;
+    }
+    .deybContainer img{
+        width: 170%;
+        height: 105%;
+        top: 0%;
+        left: -30%;
+    }
+    @keyframes up3 {
+        0%, 100% {
+            top: 0%;
+        }
+        50% {
+            top: -3%;
+        }
+    }
+    .daniContainer{
+        width: 100%;
+        height: 100%;
+        right: 8%;
+    }
+    .daniContainer img{
+        width: 115%;
+        height: 80%;
+        top: 9%;
+        left: -8%;
+    }
+    @keyframes up4 {
+        0%, 100% {
+            top: 9%;
+        }
+        50% {
+            top: 6%;
+        }
+    }
+
+}
+/* Medium: tablets 798px–991px */
+@media (min-width: 799px) and (max-width: 992px) {
+    .mainContainer {
+        grid-template-rows: 2.5fr 0.3fr 3.1fr;
+    }
+    .upper{
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    .upper img{
+        width: 70%;
+        height: 100%;
+    }
+    .description{
+        padding: 0px 20px;
+        margin-top: 50px;
+        width: 68%;
+        height: 60%;
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+    .middle{
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+        padding-top: 2.2%;
+    }
+    .sam{
+        font-size: 1.2rem;
+        padding-right: 20px;
+    }
+    .hart{
+        font-size: 1.2rem;
+        padding-left: 10px;
+    }
+    .deyb{
+        font-size: 1.2rem;
+        padding-left: 10px;
+    }
+    .dani{
+        font-size: 1.2rem;
+        padding-left: 0px;
+    }
+    .lower{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1% 0% 0% 0%;
+    }
+    .samContainer{
+        left: 6%;
+    }
+    .samContainer img{
+        width: 180%;
+        height: 120%;
+        left: -45%;
+        top: 10%;
+        transform: rotate(-10deg);
+    }
+    @keyframes up1 {
+        0%, 100% {
+            top: 10%;
+        }
+        50% {
+            top: 7%;
+        }
+    }
+    .hartContainer{
+        /* left */
+    }
+    .hartContainer img{
+        width: 180%;
+        height: 105%;
+        left: -30%;
+        top: 6%;
+    }
+    @keyframes up2 {
+        0%, 100% {
+            top: 6%;
+        }
+        50% {
+            top: 3%;
+        }
+    }
+    .deybContainer{
+        left: -5.5%;
+    }
+    .deybContainer img{
+        width: 170%;
+        height: 105%;
+        top: 0%;
+        left: -30%;
+    }
+    @keyframes up3 {
+        0%, 100% {
+            top: 0%;
+        }
+        50% {
+            top: -3%;
+        }
+    }
+    .daniContainer{
+        width: 100%;
+        height: 100%;
+        right: 8%;
+    }
+    .daniContainer img{
+        width: 115%;
+        height: 80%;
+        top: 9%;
+        left: -8%;
+    }
+    @keyframes up4 {
+        0%, 100% {
+            top: 9%;
+        }
+        50% {
+            top: 6%;
+        }
+    }
+}
+@media (min-width: 993px) and (max-width: 1199px) {
+    .mainContainer {
+        grid-template-rows: 2.5fr 0.3fr 3.1fr;
+    }
+    .upper{
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    .upper img{
+        width: 70%;
+        height: 100%;
+    }
+    .description{
+        padding: 0px 20px;
+        margin-top: 50px;
+        width: 68%;
+        height: 60%;
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+    .middle{
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+    }
+    .sam{
+        font-size: 1.4rem;
+        padding-right: 20px;
+    }
+    .hart{
+        font-size: 1.4rem;
+        padding-left: 10px;
+    }
+    .deyb{
+        font-size: 1.4rem;
+        padding-left: 10px;
+    }
+    .dani{
+        font-size: 1.4rem;
+        padding-left: 0px;
+    }
+    .lower{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1% 0% 0% 0%;
+    }
+    .samContainer{
+        left: 6%;
+    }
+    .samContainer img{
+        width: 180%;
+        height: 140%;
+        left: -45%;
+        top: 5%;
+        transform: rotate(-10deg);
+    }
+    .hartContainer{
+        /* left */
+    }
+    .hartContainer img{
+        width: 180%;
+        height: 120%;
+        left: -30%;
+    }
+    .deybContainer{
+        left: -5.5%;
+    }
+    .deybContainer img{
+        width: 170%;
+        height: 120%;
+        top: -7%;
+        left: -30%;
+    }
+    .daniContainer{
+        width: 100%;
+        height: 100%;
+        right: 8%;
+    }
+    .daniContainer img{
+        width: 115%;
+        height: 90%;
+        top: -1%;
+        left: -8%;
+    }
+}

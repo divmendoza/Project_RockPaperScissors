@@ -43,13 +43,13 @@ function process(choice) {
 
         if (playerRoundsWon === 2) {
             setTimeout(() => {
-                alert("You Win the Match!");
+                alert("YOU WIN!");
                 reset();
             }, 500);
             return;
         } else if (computerRoundsWon === 2) {
             setTimeout(() => {
-                alert("You Lose the Match!");
+                alert("YOU LOSE!");
                 reset();
             }, 500);
             return;
