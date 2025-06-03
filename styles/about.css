@@ -112,23 +112,25 @@ body {
     }
     .container2{
         padding: 0%;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
     .container2 img{
-        align-self: center;
-        top: 15%;
-        height: 60%;
-        width: 100%;
+           position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    width: 100%;
     }
     .container2 #message{
-        font-size: 0.9rem;
-        line-height: 1.3rem;
-        height: 30%;
-        width: 75%;
-        top: 281px;
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
     .container3 img {
         top: 80%;
-        left: -1357%; 
+        left: -1487%; 
         width: 1325%;
         height: 10%;
     }
