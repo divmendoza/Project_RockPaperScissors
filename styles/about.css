@@ -130,7 +130,8 @@ body {
     }
     .container2 #message{
         font-size: 0.95rem;
-        line-height: 1.3rem;
+        line-height: 1.2rem;
+        margin-top: 10px;
     }
     .container3 img {
         top: 80%;
